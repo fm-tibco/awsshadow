@@ -1,0 +1,36 @@
+{
+  "name": "flogo-awsshadow",
+  "type": "flogo:activity",
+  "ref": "github.com/fm-tibco/awsshaddow",
+  "version": "0.0.1",
+  "title": "AWS Device Shadow",
+  "description": "AWS Device Shadow",
+  "homepage": "https://github.com/fm-tibco/awwshadow/tree/master",
+  "input":[
+    {
+      "name": "thingName",
+      "type": "string",
+      "required": true
+    },
+    {
+      "name": "op",
+      "type": "string",
+      "required": true,
+      "allowed" : ["GET", "UPDATE", "DELETE"]
+    },
+    {
+      "name": "desired",
+      "type": "params"
+    },
+    {
+      "name": "reported",
+      "type": "params"
+    }
+  ],
+  "output":[
+    {
+      "name": "result",
+      "type": "object"
+    }
+  ]
+}
